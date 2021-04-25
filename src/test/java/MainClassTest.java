@@ -38,57 +38,19 @@ public class MainClassTest {
     @Test
     public void testSolver(){
 
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
-        line = sudokuSolver.selectLine();
-        sudoku = sudokuSolver.fillLine(line);
-
+        boolean ok = true;
+        while (ok) {
+            ok = false;
+            for (int i = 0; i < sudoku.length; i++) {
+                for (int j = 0; j < sudoku.length; j++) {
+                    if (sudoku[i][j] == 0) {
+                        ok = true;
+                        line = sudokuSolver.selectLine();
+                        sudoku = sudokuSolver.fillLine(line);
+                    }
+                }
+            }
+        }
         prettyPrint(sudoku);
 
     }
